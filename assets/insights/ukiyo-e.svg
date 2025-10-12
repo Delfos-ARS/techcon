@@ -1,0 +1,25 @@
+<svg width="640" height="360" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustración abstracta inspirada en ukiyo-e</title>
+  <desc id="desc">Olas estilizadas y un sol creciente que evocan el paisaje clásico del ukiyo-e.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+    <linearGradient id="crest" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#bae6fd" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#sky)" />
+  <circle cx="500" cy="120" r="84" fill="#fbbf24" opacity="0.85" />
+  <path d="M0 260 C60 220 120 220 180 260 S300 300 360 260 480 220 540 260 600 300 640 260 L640 360 L0 360 Z" fill="url(#wave)" />
+  <path d="M100 240 C160 180 260 160 320 220" fill="none" stroke="url(#crest)" stroke-width="22" stroke-linecap="round" />
+  <path d="M320 220 C380 280 480 280 540 220" fill="none" stroke="url(#crest)" stroke-width="22" stroke-linecap="round" />
+  <path d="M220 210 C260 170 320 170 360 210" fill="none" stroke="#f8fafc" stroke-width="10" stroke-linecap="round" stroke-dasharray="16 14" />
+  <path d="M420 240 C450 200 510 190 560 220" fill="none" stroke="#fef3c7" stroke-width="12" stroke-linecap="round" stroke-dasharray="20 12" />
+</svg>
