@@ -1,0 +1,28 @@
+<svg width="640" height="360" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustración abstracta inspirada en toba-e</title>
+  <desc id="desc">Una composición con un pergamino ondulado y figuras orgánicas que evocan los rollos narrativos toba-e.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1f2937" />
+    </linearGradient>
+    <linearGradient id="scroll" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7dd3fc" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171" />
+      <stop offset="100%" stop-color="#fb923c" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)" />
+  <path d="M40 120 C120 60 180 60 260 120 S400 180 480 120 560 60 620 120" fill="none" stroke="#334155" stroke-width="22" stroke-linecap="round" />
+  <path d="M120 90 C200 60 260 80 320 120 C380 160 440 180 520 150" fill="none" stroke="url(#stroke)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M110 140 Q200 220 280 210 T450 200 Q520 190 540 240" fill="rgba(125, 211, 252, 0.15)" stroke="url(#scroll)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+  <g fill="#facc15">
+    <circle cx="160" cy="150" r="16" />
+    <circle cx="240" cy="190" r="12" />
+    <circle cx="360" cy="180" r="18" />
+  </g>
+  <path d="M210 250 C260 270 320 270 380 240 C420 220 470 210 520 215" fill="none" stroke="#fde68a" stroke-width="8" stroke-linecap="round" />
+</svg>

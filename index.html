@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JapanAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/index.css" />
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="dot"></span><h1>TECH - CON : ARts 2025</h1></div>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-pressed="false">Modo claro</button>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav id="primary-nav">
+      <a class="nav-btn" href="#inicio">Inicio</a>
+      <a class="nav-btn" href="#galeria">Galería</a>
+      <a class="nav-btn" href="#historias">Contexto</a>
+      <a class="nav-btn" href="#tecnologia">Tecnología</a>
+      <a class="nav-btn" href="#implementacion">Implementación</a>
+      <a class="nav-btn" href="#contacto">Contacto</a>
+    
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="banner">
+      <video autoplay muted loop playsinline>
+        <source src="VIDEOS/videobanner.mp4" type="video/mp4" />
+        Tu navegador no soporta el formato de video.
+      </video>
+      <div class="banner-overlay">
+        <h2 id="banner-title">Bienvenidos</h2>
+        <p>Explora una colección inmersiva que fusiona arte japonés clásico con experiencias aumentadas.</p>
+        <div class="banner-actions">
+          <a class="btn primary" href="#galeria">Ver galería</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <div class="section-header">
+        <span class="section-kicker">Colección 2025</span>
+        <h2>Japan AR</h2>
+        <p>Cada obra cobra vida gracias a experiencias AR que puedes activar a través de sus códigos QR.</p>
+      </div>
+      <div class="gallery">
+        <div class="card">
+          <button class="qr-btn">QR</button>
+          <div class="flip-inner">
+            <div class="face front">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Tsunami_by_hokusai_19th_century.jpg" alt="Obra 1" />
+              <div class="info">
+                <h3>Ola Estilizada — Ukiyo‑e</h3>
+                <p>Inspirada en el estilo japonés tradicional, con colores planos y líneas marcadas.</p>
+              </div>
+            </div>
+            <div class="face back">
+              <img src="assets/obra1-qr.png" alt="QR de Obra 1" />
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <button class="qr-btn">QR</button>
+          <div class="flip-inner">
+            <div class="face front">
+              <img src="assets/obra2.jpg" alt="Obra 2" />
+              <div class="info">
+                <h3>Retrato Bijin‑ga</h3>
+                <p>Retrato inspirado en las bellas mujeres del arte japonés, con contorno marcado.</p>
+              </div>
+            </div>
+            <div class="face back">
+              <img src="assets/obra2-qr.png" alt="QR de Obra 2" />
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <button class="qr-btn">QR</button>
+          <div class="flip-inner">
+            <div class="face front">
+              <img src="assets/obra3.jpg" alt="Obra 3" />
+              <div class="info">
+                <h3>Paisaje Montañoso</h3>
+                <p>Paisaje inspirado en la naturaleza japonesa, con tonos suaves y atmósfera tranquila.</p>
+              </div>
+            </div>
+            <div class="face back">
+              <img src="assets/obra3-qr.png" alt="QR de Obra 3" />
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <button class="qr-btn">QR</button>
+          <div class="flip-inner">
+            <div class="face front">
+              <img src="assets/obra4.jpg" alt="Obra 4" />
+              <div class="info">
+                <h3>Flor de Cerezo</h3>
+                <p>Representación de la flor de cerezo, símbolo de belleza y renovación en Japón.</p>
+              </div>
+            </div>
+            <div class="face back">
+              <img src="assets/obra4-qr.png" alt="QR de Obra 4" />
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <button class="qr-btn">QR</button>
+          <div class="flip-inner">
+            <div class="face front">
+              <img src="assets/obra5.jpg" alt="Obra 5" />
+              <div class="info">
+                <h3>Templo en la Niebla</h3>
+                <p>Un templo tradicional japonés envuelto en niebla, evocando misterio y serenidad.</p>
+              </div>
+            </div>
+            <div class="face back">
+              <img src="assets/obra5-qr.png" alt="QR de Obra 5" />
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <button class="qr-btn">QR</button>
+          <div class="flip-inner">
+            <div class="face front">
+              <img src="assets/obra6.jpg" alt="Obra 6" />
+              <div class="info">
+                <h3>Samurái en Silueta</h3>
+                <p>La figura de un samurái al atardecer, símbolo de honor y tradición japonesa.</p>
+              </div>
+            </div>
+            <div class="face back">
+              <img src="assets/obra6-qr.png" alt="QR de Obra 6" />
+            </div>
+          </div>
+        </div>
+        <div class="card" data-hidden="true">
+          <button class="qr-btn">QR</button>
+          <div class="flip-inner">
+            <div class="face front">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Senju_Kan%27non_by_Kan%C5%8D_Hidenobu.jpg" alt="Obra 7" />
+              <div class="info">
+                <h3>Deidad Protectora</h3>
+                <p>Interpretación de Senju Kannon que exalta la espiritualidad y el balance en el arte nipón.</p>
+              </div>
+            </div>
+            <div class="face back">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?data=Obra7&size=320x320" alt="QR de Obra 7" />
+            </div>
+          </div>
+        </div>
+        <div class="card" data-hidden="true">
+          <button class="qr-btn">QR</button>
+          <div class="flip-inner">
+            <div class="face front">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Koson_Komori_Bat_-_Japanese_Art_Museum.Tokyo.jpg" alt="Obra 8" />
+              <div class="info">
+                <h3>Nocturno Koson</h3>
+                <p>Una escena nocturna minimalista que resalta la silueta de un murciélago bajo la luna.</p>
+              </div>
+            </div>
+            <div class="face back">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?data=Obra8&size=320x320" alt="QR de Obra 8" />
+            </div>
+          </div>
+        </div>
+        <div class="card" data-hidden="true">
+          <button class="qr-btn">QR</button>
+          <div class="flip-inner">
+            <div class="face front">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Rooster_and_hen_in_the_springtime_by_Ito_Jakuchu.jpg" alt="Obra 9" />
+              <div class="info">
+                <h3>Primavera de Jakuchū</h3>
+                <p>Colorido homenaje a Ito Jakuchū que fusiona naturaleza y simbolismo en capas AR.</p>
+              </div>
+            </div>
+            <div class="face back">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?data=Obra9&size=320x320" alt="QR de Obra 9" />
+            </div>
+          </div>
+        </div>
+        <div class="card" data-hidden="true">
+          <button class="qr-btn">QR</button>
+          <div class="flip-inner">
+            <div class="face front">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Hiroshige_-_Plum_Estate%2C_Kameido.jpg" alt="Obra 10" />
+              <div class="info">
+                <h3>Ciruelo en Flor</h3>
+                <p>Basada en la estampa de Hiroshige, invita a explorar aromas y sonidos inmersivos.</p>
+              </div>
+            </div>
+            <div class="face back">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?data=Obra10&size=320x320" alt="QR de Obra 10" />
+            </div>
+          </div>
+        </div>
+        <div class="card" data-hidden="true">
+          <button class="qr-btn">QR</button>
+          <div class="flip-inner">
+            <div class="face front">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Katsushika_Hokusai_-_Kajikazawa_in_Kai_Province_%28c._1830-1832%29.jpg" alt="Obra 11" />
+              <div class="info">
+                <h3>Kajikazawa AR</h3>
+                <p>Recrea la pesca artesanal con capas interactivas que muestran el flujo del río.</p>
+              </div>
+            </div>
+            <div class="face back">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?data=Obra11&size=320x320" alt="QR de Obra 11" />
+            </div>
+          </div>
+        </div>
+        <div class="card" data-hidden="true">
+          <button class="qr-btn">QR</button>
+          <div class="flip-inner">
+            <div class="face front">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Ukiyo-e_print_showing_Fireworks_over_Gion.jpg" alt="Obra 12" />
+              <div class="info">
+                <h3>Hanabi Nocturno</h3>
+                <p>Celebración de fuegos artificiales en Gion con efectos de sonido y luz en AR.</p>
+              </div>
+            </div>
+            <div class="face back">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?data=Obra12&size=320x320" alt="QR de Obra 12" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-actions">
+        <button type="button" class="btn ghost show-more" aria-expanded="false">Ver más obras</button>
+      </div>
+    </section>
+
+    <section id="historias" class="interactive-insights">
+      <div class="section-header">
+        <span class="section-kicker">Historias Visuales</span>
+        <h2>Tradición y Evolución</h2>
+        <p>Explora cómo el grabado Toba-e, el movimiento Ukiyo-e y el manga contemporáneo dialogan para inspirar nuestras experiencias aumentadas.</p>
+      </div>
+      <div class="insights">
+        <div class="insights-tabs" role="tablist" aria-label="Corrientes artísticas">
+          <button type="button" class="insights-tab active" role="tab" aria-selected="true" aria-controls="panel-toba" id="tab-toba" data-target="panel-toba">Toba-e</button>
+          <button type="button" class="insights-tab" role="tab" aria-selected="false" aria-controls="panel-ukiyo" id="tab-ukiyo" data-target="panel-ukiyo">Ukiyo-e</button>
+          <button type="button" class="insights-tab" role="tab" aria-selected="false" aria-controls="panel-manga" id="tab-manga" data-target="panel-manga">Manga contemporáneo</button>
+        </div>
+        <div class="insights-panels">
+          <article id="panel-toba" class="insights-panel active" role="tabpanel" tabindex="0" aria-labelledby="tab-toba">
+            <header>
+              <h3>Narrativa satírica del periodo Heian</h3>
+              <span class="tag">Siglo XII</span>
+            </header>
+            <p>Los rollos toba-e mezclan sátira, caricatura y secuencias continuas que narran episodios cotidianos del periodo Heian. Su trazo ágil sirve de inspiración para nuestras guías AR, orientadas a mostrar el flujo de una historia en movimiento.</p>
+            <p>Resaltamos sus composiciones para explicar cómo el humor visual y la narrativa encadenada se traducen en experiencias inmersivas actuales.</p>
+          </article>
+          <article id="panel-ukiyo" class="insights-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-ukiyo" hidden>
+            <header>
+              <h3>La estampa de la “vida flotante”</h3>
+              <span class="tag">Siglos XVII-XIX</span>
+            </header>
+            <p>El ukiyo-e capturó escenas urbanas, paisajes y retratos con colores planos, contornos precisos y perspectiva invertida. En la galería, destacamos estos rasgos para contextualizar la transición entre grabado tradicional y visualización digital.</p>
+            <p>La técnica muestra cómo la “vida flotante” se convierte en narrativa visual que hoy reinterpretamos mediante capas informativas breves.</p>
+          </article>
+          <article id="panel-manga" class="insights-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-manga" hidden>
+            <header>
+              <h3>Expansión narrativa multimedia</h3>
+              <span class="tag">Siglo XXI</span>
+            </header>
+            <p>El manga contemporáneo combina diseño de paneles dinámicos, ritmo cinematográfico y onomatopeyas expresivas para guiar la lectura. Esta estructura favorece despliegues rápidos de información que inspiraron nuestros relatos interactivos.</p>
+            <p>El enfoque actual permite mostrar procesos creativos y variaciones de escena con mensajes concisos pensados para dispositivos móviles.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tecnologia" class="tech-overview">
+      <div class="section-header">
+        <span class="section-kicker">Tecnología</span>
+        <h2>Plataforma inmersiva</h2>
+        <p>Combinamos WebAR, experiencias con Merge Cube y realidad aumentada multiplataforma para mostrar cada obra en capas interactivas.</p>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h3>WebAR</h3>
+          <p>Distribuimos experiencias desde el navegador sin descargas, optimizadas para cargar modelos ligeros y anclar contenidos en los marcadores QR.</p>
+        </div>
+        <div class="tech-card">
+          <h3>Merge Cube</h3>
+          <p>Usamos el cubo como soporte volumétrico: al sostenerlo, el visitante explora esculturas y escenas 3D con perspectiva en tiempo real.</p>
+        </div>
+        <div class="tech-card">
+          <h3>Realidad aumentada</h3>
+          <p>Integramos seguimiento espacial, audio inmersivo y prompts visuales para guiar la interacción y resaltar detalles de las obras.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="implementacion" class="delivery">
+      <div class="section-header">
+        <span class="section-kicker">Implementación</span>
+        <h2>De la galería al visitante</h2>
+        <p>Nuestro flujo asegura capturas de alta fidelidad, empaquetado interactivo y despliegue estable en cualquier sede de exhibición.</p>
+      </div>
+      <div class="delivery-grid">
+        <article class="delivery-card">
+          <h3>Digitalización</h3>
+          <p>Escaneamos y procesamos cada obra para generar texturas optimizadas y modelos compatibles con WebXR.</p>
+        </article>
+        <article class="delivery-card">
+          <h3>Integración</h3>
+          <p>Conectamos las escenas con paneles informativos, audio descriptivo y gestos activadores por sección.</p>
+        </article>
+        <article class="delivery-card">
+          <h3>Despliegue</h3>
+          <p>Publicamos experiencias alojadas en la nube con monitoreo de rendimiento y soporte en sitio.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="section-header">
+        <span class="section-kicker">Conversemos</span>
+        <h2>Contacto</h2>
+        <p>¿Quieres llevar la experiencia Japan AR a tu evento o espacio cultural? Escríbenos.</p>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <h3>Correo</h3>
+          <a href="mailto:info@galeria.test">info@galeria.test</a>
+        </div>
+        <div>
+          <h3>Ubicación</h3>
+          <p>Guayaquil, Ecuador</p>
+        </div>
+        <div>
+          <h3>Social</h3>
+          <p>
+            <a href="#">Instagram</a> ·
+            <a href="#">YouTube</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p style="text-align: center;">© 2025 Proyecto Interdisciplinario · Delfos</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.qr-btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        const card = btn.closest('.card');
+        card.classList.toggle('flipped');
+        btn.textContent = card.classList.contains('flipped') ? 'Obra' : 'QR';
+      });
+    });
+  </script>
+
+  <script>
+    const showMoreBtn = document.querySelector('.show-more');
+    const hiddenGalleryCards = document.querySelectorAll('.gallery .card[data-hidden="true"]');
+
+    if (showMoreBtn) {
+      if (!hiddenGalleryCards.length) {
+        showMoreBtn.remove();
+      } else {
+        showMoreBtn.addEventListener('click', () => {
+          hiddenGalleryCards.forEach(card => {
+            card.removeAttribute('data-hidden');
+          });
+          showMoreBtn.setAttribute('aria-expanded', 'true');
+          showMoreBtn.remove();
+        });
+      }
+    }
+  </script>
+
+  <script>
+    const contentSections = document.querySelectorAll('main section');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    if (!prefersReducedMotion.matches && contentSections.length) {
+      const sectionObserver = new IntersectionObserver((entries, observerInstance) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('section-visible');
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      contentSections.forEach(section => {
+        section.classList.add('section-animate');
+        sectionObserver.observe(section);
+      });
+
+      prefersReducedMotion.addEventListener('change', event => {
+        if (event.matches) {
+          sectionObserver.disconnect();
+          contentSections.forEach(section => {
+            section.classList.remove('section-animate');
+            section.classList.add('section-visible');
+          });
+        }
+      });
+    } else {
+      contentSections.forEach(section => section.classList.add('section-visible'));
+    }
+  </script>
+
+  <script>
+    const insightTabs = document.querySelectorAll('.insights-tab');
+    const insightPanels = document.querySelectorAll('.insights-panel');
+
+    if (insightTabs.length && insightPanels.length) {
+      const activateTab = (newPanelId, trigger) => {
+        insightTabs.forEach(tab => {
+          const isActive = tab === trigger;
+          tab.classList.toggle('active', isActive);
+          tab.setAttribute('aria-selected', String(isActive));
+          tab.setAttribute('tabindex', isActive ? '0' : '-1');
+        });
+
+        insightPanels.forEach(panel => {
+          const show = panel.id === newPanelId;
+          panel.classList.toggle('active', show);
+          panel.toggleAttribute('hidden', !show);
+        });
+      };
+
+      insightTabs.forEach(tab => {
+        tab.addEventListener('click', () => activateTab(tab.dataset.target, tab));
+        tab.addEventListener('keydown', event => {
+          if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+          event.preventDefault();
+          const currentIndex = Array.from(insightTabs).indexOf(tab);
+          const offset = event.key === 'ArrowRight' ? 1 : -1;
+          const nextIndex = (currentIndex + offset + insightTabs.length) % insightTabs.length;
+          insightTabs[nextIndex].focus();
+          insightTabs[nextIndex].click();
+        });
+      });
+    }
+  </script>
+
+  <script>
+    const openImageOnCanvas = (img) => {
+      const modalBg = document.createElement('div');
+      modalBg.style.position = 'fixed';
+      modalBg.style.top = 0;
+      modalBg.style.left = 0;
+      modalBg.style.width = '100vw';
+      modalBg.style.height = '100vh';
+      modalBg.style.background = 'rgba(0,0,0,0.72)';
+      modalBg.style.display = 'flex';
+      modalBg.style.alignItems = 'center';
+      modalBg.style.justifyContent = 'center';
+      modalBg.style.zIndex = 9999;
+      modalBg.style.cursor = 'pointer';
+
+      const canvas = document.createElement('canvas');
+      const canvasWidth = Math.min(window.innerWidth * 0.65, 720);
+      const canvasHeight = Math.min(window.innerHeight * 0.65, 720);
+      canvas.width = canvasWidth;
+      canvas.height = canvasHeight;
+      canvas.style.width = `${canvasWidth}px`;
+      canvas.style.height = `${canvasHeight}px`;
+      canvas.style.borderRadius = '18px';
+      canvas.style.boxShadow = '0 12px 40px rgba(0,0,0,0.35)';
+      canvas.style.background = '#fff';
+
+      modalBg.appendChild(canvas);
+      document.body.appendChild(modalBg);
+
+      const ctx = canvas.getContext('2d');
+      const tempImg = new window.Image();
+      tempImg.crossOrigin = 'anonymous';
+      tempImg.src = img.src;
+      tempImg.onload = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        const aspectRatio = tempImg.width / tempImg.height;
+        let drawWidth = canvas.width;
+        let drawHeight = drawWidth / aspectRatio;
+
+        if (drawHeight > canvas.height) {
+          drawHeight = canvas.height;
+          drawWidth = drawHeight * aspectRatio;
+        }
+
+        const offsetX = (canvas.width - drawWidth) / 2;
+        const offsetY = (canvas.height - drawHeight) / 2;
+        ctx.drawImage(tempImg, offsetX, offsetY, drawWidth, drawHeight);
+      };
+
+      modalBg.addEventListener('click', event => {
+        if (event.target === modalBg) modalBg.remove();
+      });
+    };
+
+    document.querySelectorAll('.front img, .back img').forEach(img => {
+      img.addEventListener('click', e => {
+        e.stopPropagation();
+        openImageOnCanvas(e.currentTarget);
+      });
+    });
+  </script>
+
+  <script>
+    const banner = document.querySelector('.banner');
+    const bannerTitle = document.getElementById('banner-title');
+    banner.classList.add('banner-full');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        banner.classList.remove('banner-full');
+        bannerTitle.textContent = 'Explora Arte';
+      } else {
+        banner.classList.add('banner-full');
+        bannerTitle.textContent = 'Bienvenidos';
+      }
+    });
+  </script>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('primary-nav');
+    const body = document.body;
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      body.classList.toggle('nav-open', isOpen);
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          body.classList.remove('nav-open');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    const THEME_STORAGE_KEY = 'japan-ar-theme';
+    const themeToggleBtn = document.querySelector('.theme-toggle');
+
+    if (themeToggleBtn) {
+      const prefersLightScheme = window.matchMedia('(prefers-color-scheme: light)');
+
+      const applyTheme = (mode, persist = true) => {
+        const isLight = mode === 'light';
+        document.body.classList.toggle('light-mode', isLight);
+        themeToggleBtn.setAttribute('aria-pressed', String(isLight));
+        themeToggleBtn.textContent = isLight ? 'Modo oscuro' : 'Modo claro';
+        if (persist) {
+          localStorage.setItem(THEME_STORAGE_KEY, mode);
+        }
+      };
+
+      const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+      if (storedTheme) {
+        applyTheme(storedTheme);
+      } else {
+        applyTheme(prefersLightScheme.matches ? 'light' : 'dark', false);
+      }
+
+      prefersLightScheme.addEventListener('change', event => {
+        if (!localStorage.getItem(THEME_STORAGE_KEY)) {
+          applyTheme(event.matches ? 'light' : 'dark', false);
+        }
+      });
+
+      themeToggleBtn.addEventListener('click', () => {
+        const nextTheme = document.body.classList.contains('light-mode') ? 'dark' : 'light';
+        applyTheme(nextTheme);
+      });
+    }
+  </script>
+</body>
+</html>
