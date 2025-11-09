@@ -1,3 +1,4 @@
+/* Tokens base de color, sombra y radios */
 :root {
   --bg: radial-gradient(circle at 20% -10%, #071022 0%, #040915 50%, #01040d 100%);
   --card: #0f1628;
@@ -34,12 +35,14 @@
   --label-pill-bg: rgba(141, 214, 255, 0.18);
 }
 
+/* Reset de box sizing para todas las capas */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Configuración global de tipografía y fondo */
 html,
 body {
   margin: 0;
@@ -50,14 +53,17 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Altura mínima para cubrir la ventana completa */
 body {
   min-height: 100vh;
 }
 
+/* Evita el scroll al abrir el menú en móviles */
 body.nav-open {
   overflow: hidden;
 }
 
+/* Overrides específicos para el modo claro */
 body.light-mode {
   --accent: #4670ff;
   --accent-strong: #2d4fff;
@@ -92,78 +98,95 @@ body.light-mode {
   --label-pill-bg: rgba(70, 113, 255, 0.2);
 }
 
+/* Header en modo claro: tono y sombra suaves */
 body.light-mode header {
   box-shadow: 0 10px 30px rgba(15, 28, 50, 0.08);
 }
 
+/* Icono del menú en modo claro */
 body.light-mode .menu-toggle span {
   background: #14213b;
 }
 
+/* Botones de navegación en modo claro */
 body.light-mode nav a {
   color: #132035;
   box-shadow: 0 8px 24px rgba(15, 28, 50, 0.12);
 }
 
+/* Hover en navegación modo claro */
 body.light-mode nav a:hover {
   color: var(--accent-strong);
 }
 
+/* Toggle de tema: estilos base en modo claro */
 body.light-mode .theme-toggle {
   color: #14213b;
   box-shadow: 0 10px 24px rgba(15, 28, 50, 0.12);
 }
 
+/* Hover del toggle en modo claro */
 body.light-mode .theme-toggle:hover {
   box-shadow: 0 14px 30px rgba(15, 28, 50, 0.16);
 }
 
+/* Caja hero en modo claro */
 body.light-mode .banner-overlay {
   box-shadow: 0 28px 45px rgba(37, 61, 92, 0.18);
 }
 
+/* Título destacado en modo claro */
 body.light-mode .banner-overlay h2 {
   color: #0f1a2a;
 }
 
+/* Botón QR en modo claro */
 body.light-mode .qr-btn {
   color: #163257;
   text-shadow: none;
 }
 
+/* Tarjetas informativas modo claro */
 body.light-mode .experience-card {
   box-shadow: 0 16px 32px rgba(18, 32, 52, 0.12);
 }
 
+/* Panel informativo frontal en modo claro */
 body.light-mode .front .info {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(231, 239, 255, 0.7));
   border-color: rgba(70, 113, 255, 0.26);
   box-shadow: 0 18px 34px rgba(18, 32, 52, 0.18);
 }
 
+/* Etiqueta decorativa en modo claro */
 body.light-mode .front .info::before {
   color: var(--accent-strong);
 }
 
+/* Texto descriptivo en modo claro */
 body.light-mode .front .info p {
   color: #4c5a77;
 }
 
+/* Borde luminoso de las tarjetas en modo claro */
 body.light-mode .card::before {
   background: linear-gradient(140deg, rgba(70, 113, 255, 0.28), rgba(120, 196, 255, 0.16));
 }
 
+/* Hover de la imagen en modo claro */
 body.light-mode .card:hover .front img {
   box-shadow: inset 0 0 0 1px var(--frame-highlight), 0 24px 40px rgba(18, 32, 52, 0.28);
 }
 
+/* Espaciado general entre secciones principales */
 main {
   display: flex;
   flex-direction: column;
   gap: 96px;
-  padding-bottom: 120px;
+  padding-bottom: 0;
 }
 
+/* Cabecera fija con blur y borde inferior */
 header {
   position: sticky;
   top: 0;
@@ -180,26 +203,30 @@ header {
   transition: background 0.3s ease;
 }
 
+/* Contenedor de botones en el header */
 .header-actions {
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
+/* Identidad visual junto al título */
 .brand {
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
+/* Icono del logo reemplazado por sticker */
 .brand .dot {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-strong), var(--accent));
-  box-shadow: 0 0 12px rgba(141, 214, 255, 0.6);
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  background: url('../IMAGEN/Sticker.png') center/cover no-repeat;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
 
+/* Título de la marca con degradado */
 .brand h1 {
   margin: 0;
   font-size: clamp(1.3rem, 2vw + 0.8rem, 2.1rem);
@@ -211,6 +238,7 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
+/* Botón que alterna el modo de color */
 .theme-toggle {
   border: 1px solid var(--menu-toggle-border);
   background: var(--menu-toggle-bg);
@@ -224,11 +252,13 @@ header {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
 }
 
+/* Animación al pasar sobre el toggle */
 .theme-toggle:hover {
   transform: translateY(-2px);
   box-shadow: 0 16px 30px rgba(95, 164, 255, 0.32);
 }
 
+/* Hamburguesa para dispositivos móviles */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -244,6 +274,7 @@ header {
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
+/* Líneas internas de la hamburguesa */
 .menu-toggle span {
   width: 24px;
   height: 2px;
@@ -252,24 +283,29 @@ header {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Transformación de la hamburguesa al abrir */
 .menu-toggle[aria-expanded="true"] span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
 
+/* Oculta la línea central al abrir */
 .menu-toggle[aria-expanded="true"] span:nth-child(2) {
   opacity: 0;
 }
 
+/* Línea inferior rota al abrir */
 .menu-toggle[aria-expanded="true"] span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
 
+/* Navegación principal en pantallas grandes */
 nav {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
+/* Estilo base de los botones de navegación */
 .nav-btn {
   color: var(--text);
   text-decoration: none;
@@ -283,6 +319,7 @@ nav {
   border: 1px solid transparent;
 }
 
+/* Hover y foco accesible para la navegación */
 .nav-btn:hover,
 .nav-btn:focus-visible {
   transform: translateY(-2px);
@@ -292,11 +329,13 @@ nav {
   outline: none;
 }
 
+/* Variante con borde para enlaces especiales */
 .nav-btn.nav-btn-outline {
   background: transparent;
   border-color: rgba(141, 214, 255, 0.4);
 }
 
+/* Hover y foco de la variante con borde */
 .nav-btn.nav-btn-outline:hover,
 .nav-btn.nav-btn-outline:focus-visible {
   background: rgba(141, 214, 255, 0.14);
@@ -304,6 +343,7 @@ nav {
   box-shadow: 0 10px 26px rgba(95, 164, 255, 0.28);
 }
 
+/* Hero con video de fondo y overlay */
 .banner {
   position: relative;
   width: 100%;
@@ -314,6 +354,7 @@ nav {
   isolation: isolate;
 }
 
+/* Capa de video y gradiente superior */
 .banner video,
 .banner::before {
   position: absolute;
@@ -322,6 +363,7 @@ nav {
   height: 100%;
 }
 
+/* Video de fondo ajustado al contenedor */
 .banner video {
   object-fit: cover;
   object-position: center;
@@ -329,6 +371,7 @@ nav {
   filter: var(--banner-filter);
 }
 
+/* Gradiente que mejora la lectura del texto */
 .banner::before {
   content: '';
   z-index: -1;
@@ -336,6 +379,7 @@ nav {
   pointer-events: none;
 }
 
+/* Caja central con blur para el mensaje de bienvenida */
 .banner-overlay {
   position: relative;
   display: flex;
@@ -351,12 +395,14 @@ nav {
   text-align: center;
 }
 
+/* Título principal del hero */
 .banner-overlay h2 {
   font-size: clamp(2rem, 3vw + 1rem, 3.2rem);
   font-weight: 700;
   margin: 0;
 }
 
+/* Descripción corta en el hero */
 .banner-overlay p {
   margin: 0;
   color: var(--muted);
@@ -364,6 +410,7 @@ nav {
   line-height: 1.7;
 }
 
+/* Botones dentro del hero */
 .banner-actions {
   display: flex;
   flex-wrap: wrap;
@@ -371,6 +418,7 @@ nav {
   gap: 16px;
 }
 
+/* Botón base reutilizable */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -384,32 +432,38 @@ nav {
   border: 1px solid transparent;
 }
 
+/* Botón principal con degradado */
 .btn.primary {
   background: linear-gradient(135deg, var(--accent-strong), var(--accent));
   color: #05040f;
   box-shadow: 0 16px 38px rgba(95, 164, 255, 0.38);
 }
 
+/* Hover del botón principal */
 .btn.primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 22px 52px rgba(95, 164, 255, 0.52);
 }
 
+/* Botón secundario transparente */
 .btn.ghost {
   background: rgba(16, 20, 30, 0.55);
   color: var(--text);
   border-color: rgba(141, 214, 255, 0.32);
 }
 
+/* Hover del botón secundario */
 .btn.ghost:hover {
   transform: translateY(-3px);
   border-color: rgba(141, 214, 255, 0.82);
 }
 
+/* Variante expandida del hero cuando está en top */
 .banner.banner-full {
   min-height: clamp(620px, 88vh, 880px);
 }
 
+/* Secciones de contenido con ancho máximo controlado */
 section {
   padding: 0 6vw;
   width: 100%;
@@ -418,21 +472,31 @@ section {
   min-height: 100vh;
 }
 
+/* Permite que la última sección se ajuste al contenido */
+main > section:last-of-type {
+  min-height: auto;
+  padding-bottom: 0;
+}
+
+/* Animación inicial al entrar en viewport */
 .section-animate {
   opacity: 0;
   transform: translateY(48px);
   transition: opacity 0.65s ease, transform 0.65s ease;
 }
 
+/* Estado visible tras la intersección */
 .section-animate.section-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Contenedor específico para la galería */
 #galeria {
   max-width: 1320px;
 }
 
+/* Ajuste para que el hero abarque todo el ancho */
 .banner {
   width: 100vw;
   margin: 0;
@@ -440,6 +504,7 @@ section {
   max-width: none;
 }
 
+/* Encabezados de sección: kicker + título + texto */
 .section-header {
   display: flex;
   flex-direction: column;
@@ -448,6 +513,7 @@ section {
   max-width: 720px;
 }
 
+/* Etiqueta pequeña sobre los títulos */
 .section-kicker {
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -455,23 +521,51 @@ section {
   color: rgba(141, 214, 255, 0.75);
 }
 
+/* Títulos de sección */
 .section-header h2 {
   font-size: clamp(2rem, 1.5vw + 1.6rem, 2.8rem);
   margin: 0;
 }
 
+/* Título de galería con logo integrado */
+.section-header .section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Palabras que acompañan al logo de la colección */
+.section-brand-text,
+.section-title-main {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Ajustes del logo Techcon dentro del título */
+.section-brand-logo {
+  width: 68px;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+}
+
+/* Párrafos introductorios en secciones */
 .section-header p {
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
 }
 
+/* Bloque de pestañas sobre corrientes artísticas */
 .interactive-insights {
   display: flex;
   flex-direction: column;
   gap: 36px;
 }
 
+/* Layout de pestañas + contenido contextual */
 .insights {
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -479,6 +573,7 @@ section {
   align-items: start;
 }
 
+/* Columna de pestañas laterales */
 .insights-tabs {
   display: flex;
   flex-direction: column;
@@ -492,6 +587,7 @@ section {
   top: calc(var(--header-height) + 24px);
 }
 
+/* Botón individual de pestaña */
 .insights-tab {
   display: inline-flex;
   align-items: center;
@@ -508,6 +604,7 @@ section {
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
+/* Hover y foco accesible en pestañas */
 .insights-tab:hover,
 .insights-tab:focus-visible {
   color: var(--text);
@@ -516,6 +613,7 @@ section {
   transform: translateX(2px);
 }
 
+/* Estado activo de la pestaña */
 .insights-tab.active {
   background: linear-gradient(135deg, rgba(95, 164, 255, 0.28), rgba(141, 214, 255, 0.1));
   border-color: rgba(141, 214, 255, 0.42);
@@ -523,11 +621,13 @@ section {
   box-shadow: 0 18px 32px rgba(5, 8, 18, 0.34);
 }
 
+/* Área donde aparecen los paneles */
 .insights-panels {
   display: grid;
   gap: 24px;
 }
 
+/* Contenedor de cada relato histórico */
 .insights-panel {
   border-radius: calc(var(--radius) + 2px);
   background: var(--card-surface);
@@ -539,10 +639,12 @@ section {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Oculta paneles inactivos */
 .insights-panel[hidden] {
   display: none;
 }
 
+/* Cabecera interna del panel */
 .insights-panel header {
   display: flex;
   flex-wrap: wrap;
@@ -551,17 +653,20 @@ section {
   align-items: center;
 }
 
+/* Titular del panel */
 .insights-panel h3 {
   margin: 0;
   font-size: clamp(1.3rem, 1vw + 1.1rem, 1.6rem);
 }
 
+/* Texto descriptivo dentro del panel */
 .insights-panel p {
   margin: 0;
   color: var(--muted);
   line-height: 1.8;
 }
 
+/* Listas dentro del panel */
 .insights-panel ul {
   margin: 0;
   padding-left: 1.2em;
@@ -570,10 +675,12 @@ section {
   color: var(--text);
 }
 
+/* Elementos de lista en paneles */
 .insights-panel li {
   line-height: 1.6;
 }
 
+/* Badge que muestra el periodo histórico */
 .tag {
   display: inline-flex;
   align-items: center;
@@ -586,22 +693,27 @@ section {
   color: var(--accent);
 }
 
+/* Grid de obras con tarjetas giratorias */
 .gallery {
   display: grid;
   gap: 48px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
 }
 
+/* Oculta cartas extra cuando no se necesitan */
 .gallery .card[data-hidden="true"] {
   display: none;
 }
 
+/* Contenedor del botón para mostrar más cartas */
 .gallery-actions {
   margin-top: 36px;
   display: flex;
   justify-content: center;
 }
 
+/* Desactiva animaciones para usuarios con motion reduce */
 @media (prefers-reduced-motion: reduce) {
   .section-animate {
     opacity: 1 !important;
@@ -610,15 +722,18 @@ section {
   }
 }
 
+/* Tarjeta 3D que permite flip para mostrar QR */
 .card {
   position: relative;
   perspective: 1200px;
   cursor: pointer;
-  min-height: 620px;
+  min-height: 0;
+  height: 100%;
   transition: transform 0.35s ease, filter 0.35s ease;
   isolation: isolate;
 }
 
+/* Resplandor alrededor de la tarjeta */
 .card::before {
   content: '';
   position: absolute;
@@ -632,6 +747,7 @@ section {
   pointer-events: none;
 }
 
+/* Contenedor que rota entre frente y reverso */
 .flip-inner {
   position: relative;
   width: 100%;
@@ -640,10 +756,12 @@ section {
   transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+/* Rotación completa cuando se activa el flip */
 .card.flipped .flip-inner {
   transform: rotateY(180deg);
 }
 
+/* Cara base con fondo y radio */
 .face {
   position: relative;
   width: 100%;
@@ -655,47 +773,51 @@ section {
   background: var(--card-surface);
 }
 
+/* Cara frontal con imagen y copy */
 .front {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 100%;
-  padding: 28px 28px 32px;
-  gap: 28px;
+  padding: 24px 24px 28px;
+  gap: 18px;
 }
 
+/* Imagen principal de la obra */
 .front img {
-  width: min(100%, 400px);
+  width: min(100%, 380px);
   aspect-ratio: 3 / 4;
   object-fit: contain;
   object-position: center;
   background: var(--frame-bg);
-  padding: clamp(16px, 3vw, 28px);
+  padding: clamp(14px, 2.6vw, 24px);
   border-radius: calc(var(--radius) - 6px);
   border: 1px solid var(--frame-border);
   box-shadow: inset 0 0 0 1px rgba(141, 214, 255, 0.1), var(--frame-shadow);
   margin: 0 auto;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  max-height: clamp(320px, 52vh, 450px);
+  max-height: clamp(300px, 48vh, 420px);
 }
 
+/* Caja descriptiva debajo de la obra */
 .front .info {
   width: 100%;
-  padding: 22px 24px 24px;
+  padding: 20px 22px 22px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   margin: 0;
-  margin-top: auto;
+  margin-top: 8px;
   background: linear-gradient(180deg, rgba(141, 214, 255, 0.1), rgba(6, 12, 26, 0.4));
   border-radius: calc(var(--radius) - 8px);
-  box-shadow: 0 20px 40px rgba(4, 7, 16, 0.26);
+  box-shadow: 0 18px 38px rgba(4, 7, 16, 0.26);
   color: var(--text);
   border: 1px solid rgba(141, 214, 255, 0.2);
 }
 
+/* Etiqueta superior dentro de la descripción */
 .front .info::before {
   content: 'Experiencia AR';
   display: inline-flex;
@@ -709,6 +831,7 @@ section {
   color: var(--accent);
 }
 
+/* Nombre de la obra */
 .front .info h3 {
   margin: 0;
   font-size: 1.32rem;
@@ -721,6 +844,7 @@ section {
   color: transparent;
 }
 
+/* Texto resumen de la pieza */
 .front .info p {
   margin: 0;
   color: var(--muted);
@@ -728,6 +852,7 @@ section {
   line-height: 1.6;
 }
 
+/* Cara posterior donde se muestra el QR */
 .back {
   position: absolute;
   inset: 0;
@@ -739,6 +864,7 @@ section {
   padding: 32px;
 }
 
+/* Imagen del código QR */
 .back img {
   max-width: 78%;
   height: auto;
@@ -746,6 +872,7 @@ section {
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
 }
 
+/* Botón que activa el flip */
 .qr-btn {
   position: absolute;
   top: 16px;
@@ -766,25 +893,30 @@ section {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
+/* Hover del botón QR */
 .qr-btn:hover {
   background: rgba(141, 214, 255, 0.32);
   color: var(--accent);
   transform: translateY(-2px);
 }
 
+/* Ligera elevación al pasar el cursor */
 .card:hover {
   transform: translateY(-6px);
 }
 
+/* Efecto sobre la imagen al hover */
 .card:hover .front img {
   transform: translateY(-4px) scale(1.015);
   box-shadow: inset 0 0 0 1px var(--frame-highlight), 0 28px 50px rgba(5, 9, 18, 0.5);
 }
 
+/* Activa el halo al hover */
 .card:hover::before {
   opacity: 1;
 }
 
+/* Secciones sobre tecnología e implementación */
 .tech-overview,
 .delivery {
   display: flex;
@@ -792,6 +924,7 @@ section {
   gap: 48px;
 }
 
+/* Grillas responsivas para tarjetas informativas */
 .tech-grid,
 .delivery-grid {
   display: grid;
@@ -799,6 +932,7 @@ section {
   gap: 28px;
 }
 
+/* Tarjetas de soporte para texto descriptivo */
 .tech-card,
 .delivery-card {
   border-radius: var(--radius);
@@ -811,12 +945,14 @@ section {
   gap: 12px;
 }
 
+/* Títulos dentro de las tarjetas técnicas */
 .tech-card h3,
 .delivery-card h3 {
   margin: 0;
   font-size: 1.2rem;
 }
 
+/* Párrafos dentro de las tarjetas */
 .tech-card p,
 .delivery-card p {
   margin: 0;
@@ -824,38 +960,14 @@ section {
   line-height: 1.7;
 }
 
-.contact {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 32px;
-}
-
-.contact-grid h3 {
-  margin: 0 0 12px;
-}
-
-.contact-grid a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.contact-grid a:hover {
-  text-decoration: underline;
-}
-
+/* Pie de página con créditos */
 footer {
   padding: 36px 6vw 48px;
   color: var(--footer-text);
   font-size: 0.95rem;
 }
 
+/* Ajustes para tablets y pantallas medianas */
 @media (max-width: 1024px) {
   header {
     padding: 16px 5vw;
@@ -926,7 +1038,8 @@ footer {
   }
 
   .card {
-    min-height: 540px;
+    min-height: 0;
+    height: auto;
   }
 
   .header-actions {
@@ -942,6 +1055,7 @@ footer {
   }
 }
 
+/* Ajustes para móviles grandes */
 @media (max-width: 768px) {
   header {
     padding: 16px 1.5rem;
@@ -979,10 +1093,12 @@ footer {
 
   .front img {
     max-height: 340px;
+    margin: 18px;
   }
 
   .card {
-    min-height: 500px;
+    min-height: 0;
+    height: auto;
   }
 
   main {
@@ -993,6 +1109,10 @@ footer {
     margin-bottom: 32px;
   }
 
+  .section-brand-logo {
+    width: 52px;
+  }
+
   .gallery {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -1000,12 +1120,9 @@ footer {
   .gallery-actions {
     margin-top: 24px;
   }
-
-  .front img {
-    margin: 18px;
-  }
 }
 
+/* Ajustes para móviles pequeños */
 @media (max-width: 520px) {
   .brand h1 {
     letter-spacing: 1px;
@@ -1041,7 +1158,8 @@ footer {
   }
 
   .card {
-    min-height: 460px;
+    min-height: 0;
+    height: auto;
   }
 
   footer {
