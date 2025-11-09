@@ -56,11 +56,19 @@ body {
 /* Altura mínima para cubrir la ventana completa */
 body {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Evita el scroll al abrir el menú en móviles */
 body.nav-open {
   overflow: hidden;
+}
+
+/* Imágenes fluidas para evitar desbordes en pantallas pequeñas */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Overrides específicos para el modo claro */
@@ -973,6 +981,15 @@ footer {
     padding: 16px 5vw;
   }
 
+  main {
+    gap: 84px;
+  }
+
+  section {
+    min-height: auto;
+    padding: 0 5vw 80px;
+  }
+
   nav {
     position: fixed;
     top: calc(var(--header-height) + 12px);
@@ -1102,11 +1119,15 @@ footer {
   }
 
   main {
-    gap: 72px;
+    gap: 64px;
   }
 
   .section-header {
     margin-bottom: 32px;
+  }
+
+  section {
+    padding: 0 1.75rem 72px;
   }
 
   .section-brand-logo {
@@ -1160,6 +1181,19 @@ footer {
   .card {
     min-height: 0;
     height: auto;
+  }
+
+  section {
+    padding: 0 1.25rem 60px;
+  }
+
+  .section-title {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .section-brand-logo {
+    width: 42px;
   }
 
   footer {
