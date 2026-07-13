@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Rutina de anticipación - Position CSS</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #eef2f7;
+      color: #1f2937;
+    }
+
+    header {
+      background-color: #111827;
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+
+    /* Barra pegada arriba al hacer scroll */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background-color: #2563eb;
+      padding: 14px;
+      text-align: center;
+      box-shadow: 0 3px 8px #999;
+    }
+
+    nav a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      background-color: #1d4ed8;
+    }
+
+    main {
+      width: 85%;
+      margin: 30px auto;
+    }
+
+    /* Elementos normales en orden vertical */
+    section {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px #c4c4c4;
+    }
+
+    /* Caja ligeramente movida hacia un lado */
+    .caja-movida {
+      position: relative;
+      left: 35px;
+      background-color: #fef3c7;
+      border: 3px solid #f59e0b;
+    }
+
+    /* Tarjeta padre para ubicar la etiqueta Nuevo */
+    .tarjeta {
+      position: relative;
+      width: 340px;
+      padding: 18px;
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px #999;
+      margin-bottom: 20px;
+    }
+
+    .tarjeta img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
+    /* Etiqueta encima de la imagen */
+    .etiqueta-nuevo {
+      position: absolute;
+      top: 28px;
+      right: 28px;
+      background-color: #dc2626;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 3px 8px #555;
+    }
+
+    /* Botón fijo en la esquina inferior derecha */
+    .boton-ayuda {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 30px;
+      background-color: #16a34a;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 4px 10px #777;
+      cursor: pointer;
+    }
+
+    .espacio-scroll {
+      height: 500px;
+      background-color: #dbeafe;
+      border: 2px dashed #3b82f6;
+      text-align: center;
+      padding-top: 180px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #1e40af;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Maqueta para observar position en CSS</h1>
+    <p>Observa qué elementos se mueven, se quedan fijos o aparecen encima de otros.</p>
+  </header>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Cursos</a>
+    <a href="#">Galería</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <main>
+
+    <section>
+      <h2>Elemento normal</h2>
+      <p>
+        Esta sección aparece en el orden normal de la página.
+        No tiene una posición especial.
+      </p>
+    </section>
+
+    <section class="caja-movida">
+      <h2>Caja ligeramente movida</h2>
+      <p>
+        Esta caja fue desplazada hacia la derecha, pero conserva su espacio original.
+      </p>
+    </section>
+
+    <article class="tarjeta">
+      <span class="etiqueta-nuevo">Nuevo</span>
+
+      <img 
+        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600" 
+        alt="Imagen de ejemplo">
+
+      <h2>Tarjeta con etiqueta</h2>
+      <p>
+        La etiqueta “Nuevo” aparece encima de la imagen.
+      </p>
+    </article>
+
+    <section>
+      <h2>Otro elemento normal</h2>
+      <p>
+        Este bloque sigue el flujo vertical normal del documento.
+      </p>
+    </section>
+
+    <section class="espacio-scroll">
+      Baja la página para observar la barra sticky y el botón fixed.
+    </section>
+
+  </main>
+
+  <button class="boton-ayuda">Ayuda</button>
+
+</body>
+</html>
